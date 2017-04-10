@@ -1,0 +1,10 @@
+---
+- hosts: all
+  connection: local
+
+  vars:
+    - is_macos: ansible_os_family == 'Darwin'
+    - is_ubuntu: ansible_os_family == 'Ubuntu'
+
+  roles:
+    - { role: geerlingguy.homebrew, when: is_macos }
