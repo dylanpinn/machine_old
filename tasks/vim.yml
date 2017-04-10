@@ -1,0 +1,7 @@
+---
+- name: Install vim
+  package: name=vim
+  when: is_macos
+- name: Install macvim
+  homebrew_cask: name=macvim
+  when: is_macos

@@ -10,5 +10,8 @@
     # essentials
     - include: tasks/homebrew.yml
 
+    # editors, IDEs, terminals, etc.
+    - include: tasks/vim.yml
+
     # languages
     - include: tasks/ruby.yml
