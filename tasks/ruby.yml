@@ -1,0 +1,7 @@
+---
+- name: Install rbenv
+  package: name=rbenv
+  when: is_macos
+- name: Install ruby-build
+  package: name=ruby-build
+  when: is_macos
