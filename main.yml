@@ -9,6 +9,9 @@
   tasks:
     # essentials
     - include: tasks/homebrew.yml
+    - include: tasks/apt.yml
+    - include: tasks/core.yml
+    - include: tasks/dotfiles.yml
 
     # editors, IDEs, terminals, etc.
     - include: tasks/vim.yml

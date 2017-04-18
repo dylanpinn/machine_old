@@ -1,0 +1,29 @@
+- name: Install Ubuntu-only core packages
+  package: name={{ item }}
+  when: is_ubuntu
+  with_items:
+    - build-essential
+    - openssh-server
+    - smbclient
+    - xsel
+
+- name: Install ubuntu-restricted-extras
+  package: name=ubuntu-restricted-extras
+  when: is_ubuntu
+
+- name: Install core packages
+  package: name={{ item }}
+  with_items:
+    - curl
+    - git
+    - htop
+    - vim
+    - wget
+    - zsh
+    - ncdu
+    - tree
+
+#- name: Gets the zsh path
+#  shell: which zsh
+#  register: bin_zsh
+
