@@ -1,8 +1,9 @@
 #- name: Set zsh as default shell
 #  shell: chsh -s /bin/zsh
 #  become: false
-- name: Install zplug
-  shell: curl -sL --proto-redir -all,https https://zplug.sh/installer | zsh
-  become: false
-  when: is_ubuntu
-  # TODO: Add `brew install zplug` for MacOS
+#  TODO: Don't use curl in Ansible role
+#- name: Install zplug
+#  shell: curl -sL --proto-redir -all,https https://zplug.sh/installer | zsh
+#  become: false
+#  when: is_ubuntu
+  # # TODO: Add `brew install zplug` for MacOS

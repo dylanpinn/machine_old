@@ -22,6 +22,8 @@
     - zsh
     - ncdu
     - tree
+    - direnv  
+    - ack
 
 #- name: Gets the zsh path
 #  shell: which zsh

@@ -1,0 +1,10 @@
+---
+- name: Add yarn apt keys
+  apt_key: url=https://dl.yarnpkg/debian/pubkey.gpg
+  #shell: curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+  when: is_ubuntu
+- name: Add yarn repo
+  apt_repository: repo='deb https://dl.yarnpkg.com/debian stable main'
+  when: is_ubuntu
+- name: Install yarn
+  package: name=yarn
