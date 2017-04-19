@@ -1,0 +1,4 @@
+---
+- name: Install MySQL
+  package: name=mysql-server
+  when: is_ubuntu
